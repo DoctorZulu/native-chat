@@ -1,0 +1,12 @@
+{
+  "name": "native-chat",
+  "displayName": "native-chat",
+  "expo": {
+    "name": "native-chat",
+    "slug": "native-chat",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
