@@ -7,18 +7,18 @@ import {
   View,
 } from "react-native";
 
-const Main = () => {
+const Main = (props) => {
   Main.navigationOptions = {
     title: "Chatter",
   };
 
   const [name, setName] = useState("");
 
-  onPress = () => {
+  const onPress = () => {
     props.navigation.navigate("Chat", { name });
   };
 
-  onChangeText = (name) => setName({ name });
+  const onChangeText = (text) => setName({ text });
 
   return (
     <View>

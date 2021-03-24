@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "47920482935",
+    "project_id": "native-chat-20669",
+    "storage_bucket": "native-chat-20669.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47920482935:android:75052c91d25dae41619472",
+        "android_client_info": {
+          "package_name": "com.nativechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47920482935-me9eut8nglphiu5gdiva7cl2jk1p7fp3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9Mk2RCGtwa7vCsDqaCgweFZ07D7tEujg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47920482935-me9eut8nglphiu5gdiva7cl2jk1p7fp3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

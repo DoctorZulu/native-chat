@@ -1,18 +1,9 @@
-import React from 'react';
-import { GiftedChat } from 'react-native-gifted-chat';
-
-import Fire from '../Fire';
-
+import React from "react";
+import { GiftedChat } from "react-native-gifted-chat";
+import { Text } from "react-native";
 
 const Chat = () => {
+  return <Text>Hello</Text>;
+};
 
-    static navigationOptions = ({navigation}) => ({})
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
-export default Chat
-
+export default Chat;
