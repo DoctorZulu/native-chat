@@ -1,23 +1,45 @@
-import React, { useState } from "react";
-import { GiftedChat } from "react-native-gifted-chat";
-import { Text } from "react-native";
-import Fire from '../Fire'
+import React from "react";
+import { GiftedChat } from "react-native-gifted-chat"; // 0.3.0
 
-const Chat = (props) => {
-    Chat.navigationOptions = ({navigation}) => ({
-        title: navigation.params.name
-    });
+import Fire from "../Fire";
 
-    const [messages, setMessages] = useState([]);
+class Chat extends React.Component {
+  static navigationOptions = () => ({
+    title: "Chat!",
+  });
 
-    get user() {
-        return {
-            name: props.navigation.params.name,
-            _id: Fire.shared.uid,
-        };
-    }
+  state = {
+    messages: [],
+  };
 
-  return <Text>Hello</Text>;
-};
+  get user() {
+    console.log(Fire.shared.uid);
+    return {
+      name: this.props.route.params.name,
+      _id: Fire.shared.uid,
+    };
+  }
+
+  render() {
+    return (
+      <GiftedChat
+        messages={this.state.messages}
+        onSend={Fire.shared.send}
+        user={this.user}
+      />
+    );
+  }
+
+  componentDidMount() {
+    Fire.shared.on((message) =>
+      this.setState((previousState) => ({
+        messages: GiftedChat.append(previousState.messages, message),
+      }))
+    );
+  }
+  componentWillUnmount() {
+    Fire.shared.off();
+  }
+}
 
 export default Chat;

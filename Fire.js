@@ -8,12 +8,13 @@ class Fire {
   init = () => {
     if (!firebase.apps.length) {
       firebase.initializeApp({
-        apiKey: "AIzaSyA9Mk2RCGtwa7vCsDqaCgweFZ07D7tEujg",
+        apiKey: "AIzaSyBpgVK-VZ02eKjdvkOfkFNrcUGcE8XxklU",
         authDomain: "native-chat-20669.firebaseapp.com",
-        databaseURL: "https://native-chat-20669.firebaseio.com",
+        databaseURL: "https://native-chat-20669-default-rtdb.firebaseio.com",
         projectId: "native-chat-20669",
-        storageBucket: "",
+        storageBucket: "native-chat-20669.appspot.com",
         messagingSenderId: "47920482935",
+        appId: "1:47920482935:web:b857e64d9ffcc0fe619472",
       });
     }
   };
@@ -31,10 +32,12 @@ class Fire {
     }
   };
   get uid() {
+    console.log("uid");
     return (firebase.auth().currentUser || {}).uid;
   }
 
   get ref() {
+    console.log("ref");
     return firebase.database().ref("messages");
   }
 
