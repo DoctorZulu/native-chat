@@ -8,7 +8,7 @@ class Fire {
   init = () => {
     if (!firebase.apps.length) {
       firebase.initializeApp({
-        apiKey: "AIzaSyBpgVK-VZ02eKjdvkOfkFNrcUGcE8XxklU",
+        apiKey: "",
         authDomain: "native-chat-20669.firebaseapp.com",
         databaseURL: "https://native-chat-20669-default-rtdb.firebaseio.com",
         projectId: "native-chat-20669",
